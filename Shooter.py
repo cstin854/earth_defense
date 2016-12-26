@@ -1,5 +1,6 @@
 import pygame
 from PIL import Image
+from StringIO import StringIO
 
 def get_contour(image):
     image = Image.open(image)
@@ -115,4 +116,9 @@ class Bullet():
     def __init__(self,image_name,x_pos,y_pos,x_vector,y_vector):
         image = pygame.image.load(image_name)
 
-get_contour('intro_ball.gif')
+#Temp test suite for Windows
+path = 'D:/Users/stingley/Documents/GitHub/earth_defense/'
+file_name = 'intro_ball.gif'
+file_path = path+file_name
+print(file_path)
+get_contour(file_path)
